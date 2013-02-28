@@ -19,13 +19,4 @@ public class CalendarTest {
 		assertEquals(0, Calendar.JANUARY);
 		assertEquals(1, calendar.get(Calendar.DAY_OF_MONTH));
 	}
-	
-	@Test
-	public void gettingSystemDateAndTime() throws Exception {
-		Date first = new Date();
-		Thread.sleep(1);
-		Date second = new Date();
-		assertTrue(first.before(second));
-		assertTrue(second.after(first));
-	}
 }
