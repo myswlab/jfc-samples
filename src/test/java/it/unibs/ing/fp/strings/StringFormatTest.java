@@ -23,4 +23,12 @@ public class StringFormatTest {
 		final String result = String.format(Locale.ENGLISH, "%.3f * 10 ^ %d", base, exp);
 		assertEquals("11.190 * 10 ^ 5", result);
 	}
+
+	@Test
+	public void formatScientificNotationUsingItalyLocale() throws Exception {
+		final double base = 11.19;
+		final short exp = 5;
+		final String result = String.format(Locale.ITALY, "%.3f * 10 ^ %d", base, exp);
+		assertEquals("11,190 * 10 ^ 5", result);
+	}
 }
