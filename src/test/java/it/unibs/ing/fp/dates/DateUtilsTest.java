@@ -16,7 +16,7 @@ public class DateUtilsTest {
 	}
 	
 	@Test
-	public void differenceBetweenConsecuriveDatesIsOne() throws Exception {
+	public void differenceBetweenConsecutiveDatesIsOne() throws Exception {
 		Date d1 = DateUtils.createDate(1978, Calendar.MARCH, 19);
 		Date d2 = DateUtils.createDate(1978, Calendar.MARCH, 20);
 		assertEquals(1, DateUtils.differenceBetween(d1, d2));
