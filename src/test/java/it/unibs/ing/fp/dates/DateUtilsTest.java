@@ -14,20 +14,27 @@ public class DateUtilsTest {
 		Date d = new Date();
 		assertEquals(0, DateUtils.differenceBetween(d, d));
 	}
-	
+
 	@Test
 	public void differenceBetweenConsecutiveDatesIsOne() throws Exception {
 		Date d1 = DateUtils.createDate(1978, Calendar.MARCH, 19);
 		Date d2 = DateUtils.createDate(1978, Calendar.MARCH, 20);
 		assertEquals(1, DateUtils.differenceBetween(d1, d2));
 	}
-	
+
+	@Test
+	public void givenDatesInDifferentMonthsOfTheSameYearCalculateDifferenceOne() throws Exception {
+		Date d1 = DateUtils.createDate(1978, Calendar.MARCH, 19);
+		Date d2 = DateUtils.createDate(1978, Calendar.APRIL, 20);
+		assertEquals(32, DateUtils.differenceBetween(d1, d2));
+	}
+
 	@Test
 	public void createDate() throws Exception {
 		Date d = DateUtils.createDate(1978, Calendar.MARCH, 19);
 		assertEquals("19/03/1978", new SimpleDateFormat("dd/MM/yyyy").format(d));
 	}
-	
+
 	@Test
 	public void createDateTime() throws Exception {
 		Date d = DateUtils.createDate(1978, Calendar.MARCH, 19, 0, 0, 0, 0);
