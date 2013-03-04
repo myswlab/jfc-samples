@@ -14,14 +14,14 @@ public class DateUtilsTest {
 		Date d = new Date();
 		assertEquals(0, DateUtils.differenceBetween(d, d));
 	}
-	/*
+	
 	@Test
 	public void differenceBetweenConsecuriveDatesIsOne() throws Exception {
 		Date d1 = DateUtils.createDate(1978, Calendar.MARCH, 19);
 		Date d2 = DateUtils.createDate(1978, Calendar.MARCH, 20);
 		assertEquals(1, DateUtils.differenceBetween(d1, d2));
 	}
-	*/
+	
 	@Test
 	public void createDate() throws Exception {
 		Date d = DateUtils.createDate(1978, Calendar.MARCH, 19);

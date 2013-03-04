@@ -7,7 +7,11 @@ import java.util.GregorianCalendar;
 public class DateUtils {
 
 	public static int differenceBetween(Date d1, Date d2) {
-		return 0;
+		Calendar c1 = new GregorianCalendar();
+		c1.setTime(d1);
+		Calendar c2 = new GregorianCalendar();
+		c2.setTime(d2);
+		return c2.get(Calendar.DAY_OF_MONTH) - c1.get(Calendar.DAY_OF_MONTH);
 	}
 	
 	private static Calendar createCalendar(int year, int month, int day) {
