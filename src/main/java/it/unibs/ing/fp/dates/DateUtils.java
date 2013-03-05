@@ -8,9 +8,9 @@ public class DateUtils {
 
 	public static int differenceBetween(Date d1, Date d2) {
 		Calendar c1 = new GregorianCalendar();
-		c1.setTime(d1);
+		c1.setTime(min(d1, d2));
 		Calendar c2 = new GregorianCalendar();
-		c2.setTime(d2);
+		c2.setTime(max(d1, d2));
 		int dm = c2.get(Calendar.MONTH) - c1.get(Calendar.MONTH);
 		if(dm == 0) {
 			return c2.get(Calendar.DAY_OF_MONTH) - c1.get(Calendar.DAY_OF_MONTH);
@@ -20,6 +20,22 @@ public class DateUtils {
 		}
 	}
 	
+	public static Date min(Date d1, Date d2) {
+		if(d2.after(d1)) {
+			return d1;
+		} else {
+			return d2;
+		}
+	}
+	
+	public static Date max(Date d1, Date d2) {
+		if(d1.before(d2)) {
+			return d2;
+		} else {
+			return d1;
+		}
+	}
+
 	private static int calculateDaysInIncludedMonths(Calendar c1, Calendar c2) {
 		Calendar current = createCalendar(c1.get(Calendar.YEAR), c1.get(Calendar.MONTH) + 1, 1);
 		int count = 0;
