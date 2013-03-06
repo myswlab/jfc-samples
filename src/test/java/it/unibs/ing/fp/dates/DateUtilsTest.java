@@ -32,6 +32,12 @@ public class DateUtilsTest {
 		Date d2 = DateUtils.createDate(1978, Calendar.APRIL, 20);
 		assertEquals(32, DateUtils.differenceBetween(D1, d2));
 	}
+	
+	@Test
+	public void givenDatesInDifferentYearsCalculateDifference() throws Exception {
+		Date d2 = DateUtils.createDate(1980, Calendar.MARCH, 19);
+		assertEquals(731, DateUtils.differenceBetween(D1, d2));
+	}
 
 	@Test
 	public void createDate() throws Exception {
