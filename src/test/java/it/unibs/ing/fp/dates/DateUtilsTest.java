@@ -28,7 +28,7 @@ public class DateUtilsTest {
 	}
 
 	@Test
-	public void givenDatesInDifferentMonthsOfTheSameYearCalculateDifferenceOne() throws Exception {
+	public void givenDatesInDifferentMonthsOfTheSameYearCalculateDifference() throws Exception {
 		Date d2 = DateUtils.createDate(1978, Calendar.APRIL, 20);
 		assertEquals(32, DateUtils.differenceBetween(D1, d2));
 	}
