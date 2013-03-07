@@ -38,6 +38,12 @@ public class DateUtilsTest {
 		Date d2 = DateUtils.createDate(1980, Calendar.MARCH, 19);
 		assertEquals(731, DateUtils.differenceBetween(D1, d2));
 	}
+	
+	@Test
+	public void fromBirthdayToLesson() throws Exception {
+		Date d2 = DateUtils.createDate(2013, Calendar.MARCH, 11);
+		assertEquals(35 * 365 + 9 - 8, DateUtils.differenceBetween(D1, d2));
+	}
 
 	@Test
 	public void createDate() throws Exception {
