@@ -23,7 +23,6 @@ public class DateFormatTest {
 	public void formatDateAndTime() throws Exception {
 		final String format = "dd-MM-yy HH:mm:ss";
 		DateFormat formatter = new SimpleDateFormat(format);
-		System.out.println(ORIGIN);
 		assertEquals("01-01-70 00:00:00", formatter.format(ORIGIN));
 	}
 	
