@@ -6,6 +6,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 import org.junit.Test;
 
@@ -24,5 +25,33 @@ public class DateFormatTest {
 		DateFormat formatter = new SimpleDateFormat(format);
 		System.out.println(ORIGIN);
 		assertEquals("01-01-70 00:00:00", formatter.format(ORIGIN));
+	}
+	
+	@Test
+	public void formatUsingMonthSmallDescriptionAndItalianLocale() throws Exception {
+		final String format = "dd MMM yyyy";
+		DateFormat formatter = new SimpleDateFormat(format, Locale.ITALY);
+		assertEquals("01 gen 1970", formatter.format(ORIGIN));
+	}
+	
+	@Test
+	public void formatUsingMonthSmallDescriptionAndEnglishLocale() throws Exception {
+		final String format = "dd MMM yyyy";
+		DateFormat formatter = new SimpleDateFormat(format, Locale.ENGLISH);
+		assertEquals("01 Jan 1970", formatter.format(ORIGIN));
+	}
+	
+	@Test
+	public void formatUsingMonthLongDescriptionAndItalianLocale() throws Exception {
+		final String format = "dd MMMM yyyy";
+		DateFormat formatter = new SimpleDateFormat(format, Locale.ITALY);
+		assertEquals("01 gennaio 1970", formatter.format(ORIGIN));
+	}
+	
+	@Test
+	public void formatUsingMonthLongDescriptionAndEnglishlocale() throws Exception {
+		final String format = "dd MMMM yyyy";
+		DateFormat formatter = new SimpleDateFormat(format, Locale.ENGLISH);
+		assertEquals("01 January 1970", formatter.format(ORIGIN));
 	}
 }
