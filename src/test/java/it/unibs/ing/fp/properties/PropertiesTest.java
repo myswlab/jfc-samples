@@ -35,4 +35,14 @@ public class PropertiesTest {
 		properties.load(input);
 		assertEquals("4to", properties.getProperty("fourth", "4to"));
 	}
+	
+	@Test
+	public void loadFromXmlPropertiesFile() throws Exception {
+		Properties properties = new Properties();
+		InputStream input = getClass().getResourceAsStream("/sample.xml");
+		properties.loadFromXML(input);
+		assertEquals("I", properties.getProperty("one"));
+		assertEquals("II", properties.getProperty("two"));
+		assertEquals("X", properties.getProperty("ten"));
+	}
 }
