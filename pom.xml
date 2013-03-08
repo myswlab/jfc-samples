@@ -8,8 +8,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compile.source>1.6</maven.compile.source>
-		<maven.compile.target>1.6</maven.compile.target>
+		<maven.compile.source>1.7</maven.compile.source>
+		<maven.compile.target>1.7</maven.compile.target>
 	</properties>
 
 	<dependencies>
@@ -29,7 +29,7 @@
 				<version>2.4</version>
 				<configuration>
 					<verbose>true</verbose>
-					<compilerVersion>1.6</compilerVersion>
+					<compilerVersion>1.7</compilerVersion>
 					<source>${maven.compile.source}</source>
 					<target>${maven.compile.target}</target>
 				</configuration>
