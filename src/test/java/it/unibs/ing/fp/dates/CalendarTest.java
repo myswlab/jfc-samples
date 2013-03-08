@@ -33,10 +33,8 @@ public class CalendarTest {
 	}
 
 	private Calendar createCalendar(int year, int month, int day) {
-		Calendar calendar = new GregorianCalendar();
-		calendar.set(Calendar.YEAR, year);
-		calendar.set(Calendar.MONTH, month);
-		calendar.set(Calendar.DAY_OF_MONTH, day);
+		Calendar calendar = new GregorianCalendar(year, month, day, 0, 0, 0);
+		calendar.set(Calendar.MILLISECOND, 0);
 		return calendar;
 	}
 }
