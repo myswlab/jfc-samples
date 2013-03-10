@@ -83,10 +83,7 @@ public class DateUtils {
 	}
 
 	private static Calendar createCalendar(int year, int month, int day) {
-		Calendar cal = new GregorianCalendar();
-		cal.set(Calendar.YEAR, year);
-		cal.set(Calendar.MONTH, month);
-		cal.set(Calendar.DAY_OF_MONTH, day);
+		Calendar cal = new GregorianCalendar(year, month, day);
 		return cal;
 	}
 
@@ -95,11 +92,18 @@ public class DateUtils {
 	}
 
 	public static Date createDate(int year, int month, int day, int hour, int minutes, int seconds, int ms) {
-		Calendar cal = createCalendar(year, month, day);
+		Calendar cal = createCalendar(year, month, day, hour, minutes, seconds, ms);
 		cal.set(Calendar.HOUR, hour);
 		cal.set(Calendar.MINUTE, minutes);
 		cal.set(Calendar.SECOND, seconds);
 		cal.set(Calendar.MILLISECOND, ms);
 		return cal.getTime();
+	}
+
+	private static Calendar createCalendar(int year, int month, int day,
+			int hour, int minutes, int seconds, int ms) {
+		Calendar cal = new GregorianCalendar(year, month, day, hour, minutes, seconds);
+		cal.set(Calendar.MILLISECOND, ms);
+		return cal;
 	}
 }
