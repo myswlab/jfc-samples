@@ -93,9 +93,6 @@ public class DateUtils {
 
 	public static Date createDate(int year, int month, int day, int hour, int minutes, int seconds, int ms) {
 		Calendar cal = createCalendar(year, month, day, hour, minutes, seconds, ms);
-		cal.set(Calendar.HOUR, hour);
-		cal.set(Calendar.MINUTE, minutes);
-		cal.set(Calendar.SECOND, seconds);
 		cal.set(Calendar.MILLISECOND, ms);
 		return cal.getTime();
 	}
