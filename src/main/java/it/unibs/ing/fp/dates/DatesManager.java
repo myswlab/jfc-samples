@@ -20,13 +20,13 @@ public class DatesManager {
 	public void run() throws ParseException {
 		boolean go = true;
 		while (go) {
-			out.print("Insert initial date: ");
+			out.println("Insert initial date: ");
 			Date initialDate = FORMATTER.parse(in.next());
-			out.print("Insert final date: ");
+			out.println("Insert final date: ");
 			Date finalDate = FORMATTER.parse(in.next());
 			int difference = DateUtils.differenceBetween(initialDate, finalDate);
 			out.println(String.format("Difference between %s and %s is %d\n", FORMATTER.format(initialDate), FORMATTER.format(finalDate), difference));
-			out.print("Repeat execution? ");
+			out.println("Repeat execution? ");
 			go = "y".equalsIgnoreCase(in.next());
 		}
 	}
