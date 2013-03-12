@@ -10,6 +10,8 @@ import java.util.Locale;
 
 import org.junit.Test;
 
+import sun.font.CreatedFontTracker;
+
 public class DateFormatTest {
 	private static final Date ORIGIN = DateUtils.createDate(1970, Calendar.JANUARY, 1, 0, 0, 0, 0);
 	@Test
@@ -52,5 +54,14 @@ public class DateFormatTest {
 		final String format = "dd MMMM yyyy";
 		DateFormat formatter = new SimpleDateFormat(format, Locale.ENGLISH);
 		assertEquals("01 January 1970", formatter.format(ORIGIN));
+	}
+	
+	@Test
+	public void parseDateUsingItalianFormat() throws Exception {
+		final DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		final String dateAsString = "11/03/2013";
+		Date parsed = formatter.parse(dateAsString);
+		Date expected = DateUtils.createDate(2013, Calendar.MARCH, 11);
+		assertEquals(expected, parsed);
 	}
 }
