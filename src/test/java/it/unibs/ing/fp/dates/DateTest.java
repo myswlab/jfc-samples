@@ -10,7 +10,7 @@ public class DateTest {
 	@Test
 	public void gettingSystemDateAndTime() throws Exception {
 		Date first = new Date();
-		Thread.sleep(10);
+		Thread.sleep(50);
 		Date second = new Date();
 		assertTrue(first.before(second));
 		assertTrue(second.after(first));
@@ -19,7 +19,7 @@ public class DateTest {
 	@Test
 	public void gettingCurrentTimeMillis() throws Exception {
 		long first = System.currentTimeMillis();
-		Thread.sleep(10);
+		Thread.sleep(50);
 		long second = System.currentTimeMillis();
 		assertTrue(first < second);
 	}
