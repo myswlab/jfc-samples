@@ -11,5 +11,11 @@ public class HelloTest {
 		assertEquals("Hello, World!", result);
 	}
 	
+	@Test
+	public void testSayHelloTo() throws Exception {
+		final String result = new Hello().sayHelloTo("boys");
+		assertEquals("Hello, boys!", result);
+	}
+	
 	
 }
