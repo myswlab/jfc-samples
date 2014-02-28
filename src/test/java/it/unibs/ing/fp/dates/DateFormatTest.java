@@ -10,8 +10,6 @@ import java.util.Locale;
 
 import org.junit.Test;
 
-import sun.font.CreatedFontTracker;
-
 public class DateFormatTest {
 	private static final Date ORIGIN = DateUtils.createDate(1970, Calendar.JANUARY, 1, 0, 0, 0, 0);
 	@Test
