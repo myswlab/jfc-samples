@@ -24,4 +24,13 @@ public class BankAccountTest {
 		account.deposit(depositAmount);
 		assertEquals((initial + depositAmount), account.getBalance());
 	}
+	
+	@Test
+	public void withdrawDecreasesBalance() throws Exception {
+		final long initial = 19;
+		final long withdrawAmount = 11;
+		final BankAccount account = new BankAccount(initial);
+		account.withdraw(withdrawAmount);
+		assertEquals((initial - withdrawAmount), account.getBalance());
+	}
 }
