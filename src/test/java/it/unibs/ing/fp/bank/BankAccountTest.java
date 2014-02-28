@@ -15,4 +15,13 @@ public class BankAccountTest {
 		final long balance = 19;
 		assertEquals(balance, new BankAccount(balance).getBalance());
 	}
+	
+	@Test
+	public void depositAugmentsBalance() throws Exception {
+		final long initial = 19;
+		final long depositAmount = 11;
+		final BankAccount account = new BankAccount(initial);
+		account.deposit(depositAmount);
+		assertEquals((initial + depositAmount), account.getBalance());
+	}
 }
