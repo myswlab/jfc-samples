@@ -21,7 +21,13 @@ public class BankAccount {
 	}
 
 	public long withdraw(long withdrawAmount) {
-		balance -= withdrawAmount;
-		return withdrawAmount;
+		if(withdrawAmount <= balance) {
+			balance -= withdrawAmount;
+			return withdrawAmount;
+		} else {
+			long available = balance;
+			balance = 0;
+			return available;
+		}
 	}
 }

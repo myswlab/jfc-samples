@@ -41,4 +41,13 @@ public class BankAccountTest {
 		final BankAccount account = new BankAccount(initial);
 		assertEquals(withdrawAmount, account.withdraw(withdrawAmount));
 	}
+	
+	@Test
+	public void cantWithdrawWhenWithdrawAmountExceedsCurrentBalance() throws Exception {
+		final long initial = 19;
+		final long withdrawAmount = 25;
+		final BankAccount account = new BankAccount(initial);
+		assertEquals(initial, account.withdraw(withdrawAmount));
+		assertEquals(0, account.getBalance());
+	}
 }
