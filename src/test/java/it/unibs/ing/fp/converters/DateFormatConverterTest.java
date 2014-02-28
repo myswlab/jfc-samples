@@ -14,4 +14,10 @@ public class DateFormatConverterTest {
 		final DateFormatConverter converter = new DateFormatConverter("dd/MM/yyyy", "yyyyMMdd");
 		assertEquals("20140228", converter.convertFirstToSecond("28/02/2014"));
 	}
+
+	@Test
+	public void convertSecondFormatToFirst() throws Exception {
+		final DateFormatConverter converter = new DateFormatConverter("dd/MM/yyyy", "yyyyMMdd");
+		assertEquals("28/02/2014", converter.convertSecondToFirst("20140228"));
+	}
 }

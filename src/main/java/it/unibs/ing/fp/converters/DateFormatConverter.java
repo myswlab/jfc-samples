@@ -17,4 +17,9 @@ public class DateFormatConverter {
 		return second.format(date);
 	}
 
+	public String convertSecondToFirst(String input) throws ParseException {
+		final Date date = second.parse(input);
+		return first.format(date);
+	}
+
 }
