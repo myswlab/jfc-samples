@@ -33,4 +33,12 @@ public class BankAccountTest {
 		account.withdraw(withdrawAmount);
 		assertEquals((initial - withdrawAmount), account.getBalance());
 	}
+	
+	@Test
+	public void withdrwaReturnsWithdrawedMoney() throws Exception {
+		final long initial = 19;
+		final long withdrawAmount = 11;
+		final BankAccount account = new BankAccount(initial);
+		assertEquals(withdrawAmount, account.withdraw(withdrawAmount));
+	}
 }

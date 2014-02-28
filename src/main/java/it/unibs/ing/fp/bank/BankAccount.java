@@ -20,7 +20,8 @@ public class BankAccount {
 		balance += depositAmount;
 	}
 
-	public void withdraw(long withdrawAmount) {
+	public long withdraw(long withdrawAmount) {
 		balance -= withdrawAmount;
+		return withdrawAmount;
 	}
 }
