@@ -24,4 +24,9 @@ public class StringUtilsTest {
 	public void nullStringIsPalindrome() throws Exception {
 		assertTrue(StringUtils.isPalindrome(null));
 	}
+	
+	@Test
+	public void emptyStringIsPalindrome() throws Exception {
+		assertTrue(StringUtils.isPalindrome(""));
+	}
 }
