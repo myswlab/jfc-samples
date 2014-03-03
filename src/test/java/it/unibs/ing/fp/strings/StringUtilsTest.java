@@ -9,4 +9,9 @@ public class StringUtilsTest {
 	public void reverseOfNullIsNull() throws Exception {
 		assertNull(StringUtils.reverse(null));
 	}
+	
+	@Test
+	public void reverseOfEmptysNull() throws Exception {
+		assertEquals("", StringUtils.reverse(""));
+	}
 }
