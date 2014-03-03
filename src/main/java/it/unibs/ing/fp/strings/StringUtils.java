@@ -12,7 +12,8 @@ public class StringUtils {
 		return output;
 	}
 
-	public static boolean isPalindrome(String object) {
-		return true;
+	public static boolean isPalindrome(String input) {
+		final String reverse = reverse(input);
+		return (reverse == null && input == null) || reverse.equals(input);
 	}
 }
