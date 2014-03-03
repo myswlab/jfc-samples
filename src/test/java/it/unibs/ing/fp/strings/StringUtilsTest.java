@@ -19,4 +19,9 @@ public class StringUtilsTest {
 	public void reverseOfAbcIsCba() throws Exception {
 		assertEquals("cba", StringUtils.reverse("abc"));
 	}
+	
+	@Test
+	public void nullStringIsPalindrome() throws Exception {
+		assertTrue(StringUtils.isPalindrome(null));
+	}
 }

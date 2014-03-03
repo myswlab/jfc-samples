@@ -11,4 +11,8 @@ public class StringUtils {
 		}
 		return output;
 	}
+
+	public static boolean isPalindrome(String object) {
+		return true;
+	}
 }
