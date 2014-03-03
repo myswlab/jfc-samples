@@ -14,4 +14,9 @@ public class StringUtilsTest {
 	public void reverseOfEmptysNull() throws Exception {
 		assertEquals("", StringUtils.reverse(""));
 	}
+	
+	@Test
+	public void reverseOfAbcIsCba() throws Exception {
+		assertEquals("cba", StringUtils.reverse("abc"));
+	}
 }
