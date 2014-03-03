@@ -34,4 +34,9 @@ public class StringUtilsTest {
 	public void abcdStringIsNotPalindrome() throws Exception {
 		assertFalse(StringUtils.isPalindrome("abcd"));
 	}
+	
+	@Test
+	public void etnagiganteStringIsPalindrome() throws Exception {
+		assertTrue(StringUtils.isPalindrome("etnagigante"));
+	}
 }
