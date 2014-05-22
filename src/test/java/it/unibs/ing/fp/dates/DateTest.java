@@ -27,6 +27,7 @@ public class DateTest {
 	@Test
 	public void gettingCurrentTimeNanos() throws Exception {
 		long first = System.nanoTime();
+		Thread.sleep(1);
 		long second = System.nanoTime();
 		assertTrue(first < second);
 	}
